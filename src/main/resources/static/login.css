@@ -1,6 +1,11 @@
+@font-face {
+    font-family: myfont;
+    src: url(arkitechmedium.ttf);
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 120px;
+    margin-top: 160px;
     background-image: url("bg.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,35 +15,15 @@ body {
     box-sizing: border-box;
 }
 
-.left-content {
-    float: left;
-    width: 50%;
-    height: 400px;
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
-.right-content {
-    float: left;
-    width: 50%;
-    background-color: rgb(242, 242, 243);
-    padding: 35px;
-    height: 400px;
-}
-
-.container {
-    margin-top: 50px;
-    margin: auto;
-    width: 50%;
-    padding: 10px;
-    overflow: hidden;
-}
-
-form {
-    max-width: 500px;
-    margin: auto;
-}
-
-h2 {
-    color: dodgerblue;
+.logo-img {
+    width: 60%;
+    height: 60%;
 }
 
 .input-container {
@@ -47,9 +32,27 @@ h2 {
     margin-bottom: 15px;
 }
 
+h2 {
+    color: rgb(3, 88, 141);
+}
+
+.phrase {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 25px;
+    font-family: myfont;
+    padding-left: 40px;
+}
+
+.phrase2 {
+    color: rgba(255, 255, 255, 0.774);
+    font-size: 40px;
+    font-family: myfont;
+    padding-left: 130px;
+}
+
 .icon {
     padding: 10px;
-    background: dodgerblue;
+    background: rgb(3, 88, 141);
     color: white;
     min-width: 50px;
     text-align: center;
@@ -61,12 +64,17 @@ h2 {
     outline: none;
 }
 
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
 .input-field:focus {
     border: 2px solid dodgerblue;
 }
 
 .btn {
-    background-color: dodgerblue;
+    background-color: rgb(3, 88, 141);
     color: white;
     padding: 15px 20px;
     border: none;
@@ -79,3 +87,24 @@ h2 {
     opacity: 1;
 }
 
+.left-content {
+    padding-top: 50px;
+    float: left;
+    width: 50%;
+    height: 400px;
+}
+
+.right-content {
+    float: left;
+    width: 30%;
+    background-color: rgb(242, 242, 243);
+    padding: 25px;
+    height: 400px;
+}
+
+.container {
+    margin: auto;
+    width: 80%;
+    padding: 10px;
+    overflow: hidden;
+}
