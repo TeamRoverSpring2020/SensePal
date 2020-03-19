@@ -16,7 +16,7 @@
         <h2 class="phrase2">CAN'T</h2>
     </div>
     <div class="right-content">
-        <form form method="POST" th:action="'/login'">
+        <form method="POST" th:action="@{/login}">
             <h2>Login</h2>
             <div class="input-container">
                 <i class="fa fa-user icon"></i>
@@ -26,9 +26,9 @@
                 <i class="fa fa-key icon"></i>
                 <input class="input-field" type="password" placeholder="Password" name="password">
             </div>
-            <!--<div th:if="${param.error}">
-            Feil brukernavn eller passord.
-            </div>-->
+            <div th:if="${param.error}">
+            Wrong password or Username!
+            </div>
             <button type="submit" class="btn">SIGN IN</button>
         </form>
     </div>

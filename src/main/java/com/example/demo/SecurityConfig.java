@@ -22,7 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .authorizeRequests()
                 .antMatchers("/login", "/login.css", "/*.png").permitAll()
-                .antMatchers("/admin").hasRole("ADMIN")
+                .antMatchers("/home").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -32,7 +32,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Bean
     public UserDetailsService userDetailsService() {
         InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        manager.createUser(org.springframework.security.core.userdetails.User.withDefaultPasswordEncoder().username("admin").password("sensepal").roles("admin").build());
+        manager.createUser(User.withDefaultPasswordEncoder().username("user").password("123").roles("USER").build());
+        manager.createUser(User.withDefaultPasswordEncoder().username("admin").password("123").roles("ADMIN").build());
         return manager;
     }
 
