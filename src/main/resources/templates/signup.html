@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <form  method="POST" th:action="@{/signup}"  >
+        <h2>Register</h2>
+        <div>
+
+            <label for="first">Your Name: </label><br>
+            <input id="first" type="text" name="firstname" placeholder="First Name"  autofocus>
+            <input id="last" type="text" name="lastname" placeholder="Last Name "autofocus>
+            <br><br>
+            <label>Enter username: </label><br>
+            <input type="text" name="username" placeholder="Username.."  autofocus required><br><br>
+
+
+            <label>Enter password: </label><br>
+            <input type="password" name="password" placeholder="Password.."  autofocus required>
+            <br><br>
+            <label>Re-enter password: </label><br>
+            <input type="password" name="password2" placeholder="Password.." autofocus required>
+
+            <br><br>
+            <label for="email">Email Address: </label><br>
+            <input id="email" type="email" placeholder="Enter email.."  name="email" autofocus>
+            <br><br>
+            <button class="btn" id="form_button">Submit</button>
+            <br>
+
+        </div>
+        <br><br>
+    </form>
+
+</div>
+
+</body>
+</html>
