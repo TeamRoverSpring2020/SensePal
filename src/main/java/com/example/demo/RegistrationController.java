@@ -24,6 +24,10 @@ public class RegistrationController {
     public String postSignup(@ModelAttribute User user){
         user.setPassword(encoder.encode(user.getPassword()));
         userRepository.save(user);
+        System.out.println(user.getEmail());
+        System.out.println(user.getFirstname());
+        System.out.println(user.getLastname());
+        System.out.println(user.getId());
 
         return "login";
     }
