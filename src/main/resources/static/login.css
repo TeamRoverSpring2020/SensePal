@@ -30,6 +30,7 @@ body {
     display: flex;
     width: 100%;
     margin-bottom: 15px;
+    padding-top: 10px;
 }
 
 h2 {
@@ -57,7 +58,7 @@ h2 {
     text-align: center;
 }
 
-.input-field {
+.input-field, .input-reg {
     width: 100%;
     padding: 10px;
     outline: none;
@@ -68,7 +69,7 @@ form {
     margin: auto;
 }
 
-.input-field:focus {
+.input-field:focus, .input-reg:focus {
     border: 2px solid dodgerblue;
 }
 
@@ -82,8 +83,9 @@ form {
     opacity: 0.9;
 }
 
+
 .btn:hover {
-    opacity: 1;
+    background-color: rgb(5, 62, 97);
 }
 
 .left-content {
@@ -108,3 +110,17 @@ form {
     padding: 10px;
     overflow: hidden;
 }
+
+/*--------- REGISTER FORM --------*/
+
+.register {
+    background-color: rgb(242, 242, 243);
+    padding: 25px;
+    width: 430px;
+}
+
+.register-header {
+    font-family: myfont;
+}
+
+/*---------------------------------*/
