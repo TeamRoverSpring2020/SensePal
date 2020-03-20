@@ -24,6 +24,8 @@ public class User {
     public User() {
     }
 
+
+
     public int getId() {
         return id;
     }
@@ -55,5 +57,19 @@ public class User {
     public String getLastname() {
         return lastname;
     }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+
 }
 
