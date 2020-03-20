@@ -1,9 +1,14 @@
 package com.example.demo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import javax.persistence.*;
 
 @Entity
 public class User {
+
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

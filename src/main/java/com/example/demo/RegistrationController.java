@@ -22,6 +22,7 @@ public class RegistrationController {
 
     @PostMapping("/signup")
     public String postSignup(@ModelAttribute User user){
+        user.setPassword(encoder.encode(user.getPassword()));
         userRepository.save(user);
 
         return "login";
