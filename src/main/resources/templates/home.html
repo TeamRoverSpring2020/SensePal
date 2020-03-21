@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
 <header>
@@ -54,16 +55,16 @@
     <div class="control-panel">
         <div class="arrow-container">
             <div class="arrowup">
-                <img src="arrowup.png">  <!---- BUTTON FUNCTION HERE! ---->
+                <img src="arrowup.png" onclick="controlBoard('drive')">  <!---- BUTTON FUNCTION HERE! ---->
             </div>
             <div class="arrowleft">
-                <img src="arrowleft.png">  <!---- BUTTON FUNCTION HERE! ---->
+                <img src="arrowleft.png" onclick="controlBoard('left')">  <!---- BUTTON FUNCTION HERE! ---->
             </div>
             <div class="arrowright">
-                <img src="arrowright.png">  <!---- BUTTON FUNCTION HERE! ---->
+                <img src="arrowright.png" onclick="controlBoard('right')">  <!---- BUTTON FUNCTION HERE! ---->
             </div>
             <div class="arrowdown">
-                <img src="arrowdown.png">  <!---- BUTTON FUNCTION HERE! ---->
+                <img src="arrowdown.png" onclick="controlBoard('reverse')">  <!---- BUTTON FUNCTION HERE! ---->
             </div>
         </div>
     </div>
