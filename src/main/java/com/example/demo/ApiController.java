@@ -13,7 +13,7 @@ public class ApiController {
     SensorObservationRepository sensorObservationRepository
 
 
-    @GetMapping
+    @GetMapping("/api/sensor-observation")
     public SensorObservation currentObservation() {
         return sensorObservationRepository.findById(1L).get();
     }
