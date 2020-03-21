@@ -8,7 +8,7 @@ function controlBoard(direction) {
         })
     }
 
-    fetch('http://localhost:8080/api/navigation', options)
+    fetch('http://localhost:8081/api/navigation', options)
         .then(response => console.log(response));
 }
 
