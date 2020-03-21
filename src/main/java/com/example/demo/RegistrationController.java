@@ -28,7 +28,7 @@ public class RegistrationController {
     @PostMapping("/signup")
     public String postSignup( @Valid User user, BindingResult result){
         UserValidator userValidator = new UserValidator();
-       
+
         if(result.hasErrors()){
 //            model.addAttribute("error", "Failed!");
             return "signup";
