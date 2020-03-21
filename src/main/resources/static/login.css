@@ -123,4 +123,15 @@ form {
     font-family: myfont;
 }
 
+.error {
+    border-style: solid;
+    border-color: red;
+}
+
+.errormes {
+    color: orangered;
+    font-weight: bold;
+    font-size: small;
+}
+
 /*---------------------------------*/
