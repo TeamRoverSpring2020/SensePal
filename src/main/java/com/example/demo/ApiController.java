@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiController {
 
     @Autowired
-    SensorObservationRepository sensorObservationRepository
+    SensorObservationRepository sensorObservationRepository;
 
 
     @GetMapping("/api/sensor-observation")
