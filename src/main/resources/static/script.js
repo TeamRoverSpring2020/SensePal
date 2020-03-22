@@ -14,22 +14,20 @@ function sensorData() {
         });
 }
 
-function getMessage(){
-    document.getElementById("temperature").innerHTML = "det gikk!";
-}
 
-function controlBoard(direction) {
+function controlBoard(dir) {
     const options = {
         method: "POST",
-        body: JSON.stringify({direction: direction}),
+        body: JSON.stringify({direction: dir}),
         headers: new Headers({
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         })
     }
 
     fetch('http://localhost:8081/api/navigation', options)
         .then(response => console.log(response));
 }
+
 
 
 /*window.setInterval(function(){
