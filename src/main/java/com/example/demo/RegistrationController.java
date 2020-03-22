@@ -1,15 +1,13 @@
 package com.example.demo;
 
 import com.example.demo.exceptions.SameUserNameException;
+import com.example.demo.exceptions.WrongPasswordException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
@@ -22,28 +20,30 @@ public class RegistrationController {
     PasswordEncoder encoder;
 
 
-
     @GetMapping("/signup")
-    public String signup(Model model){
+    public String signup(Model model) {
         model.addAttribute("user", new User());
         return "signup";
     }
 
     @PostMapping("/signup")
-    public String postSignup( @Valid User user, BindingResult result, @ModelAttribute User users) throws SameUserNameException {
+    public String postSignup(@Valid User user, BindingResult result, @ModelAttribute User users, @RequestParam String password2) throws SameUserNameException, WrongPasswordException {
         boolean isInDatabase = userRepository.existsUserByUsername(user.getUsername());
 
-        if(isInDatabase){
+        if (isInDatabase) {
             throw new SameUserNameException();
         }
 
         UserValidator userValidator = new UserValidator();
-        if(userValidator.supports(users.getClass())) {
+        if (userValidator.supports(users.getClass())) {
             userValidator.validate(users, result);
+        }
+        if (!user.getPassword().equals(password2)) {
+            throw new WrongPasswordException();
         }
 
 
-        if(result.hasErrors()){
+        if (result.hasErrors()) {
 //            model.addAttribute("error", "Failed!");
             return "signup";
         }
@@ -55,33 +55,19 @@ public class RegistrationController {
     }
 
     @ExceptionHandler(SameUserNameException.class)
-    String invalidUsername(Model model){
+    String invalidUsername(Model model) {
         model.addAttribute("user", new User());
         model.addAttribute("invalidUserName", "User already exists");
 
         return "signup";
     }
 
+    @ExceptionHandler(WrongPasswordException.class)
+    String confirmedPassword(Model model) {
+        model.addAttribute("user", new User());
+        model.addAttribute("invalidPassword", "Password does't match");
 
+        return "signup";
+    }
 
-
-
-/*    @PostMapping("/signup")
-    public String postSignup( Model model, BindingResult result, @Valid User user){
-        UserValidator userValidator = new UserValidator();
-        if(userValidator.supports(user.getClass())) {
-            userValidator.validate(user, result);
-        }
-        if(result.hasErrors()){
-//            model.addAttribute("error", "Failed!");
-            return "signup";
-        }
-
-
-        user.setPassword(encoder.encode(user.getPassword()));
-        userRepository.save(user);
-
-        return "login";
-    }*/
 }
-
