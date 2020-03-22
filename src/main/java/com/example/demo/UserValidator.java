@@ -26,10 +26,6 @@ public class UserValidator  implements Validator {
             e.rejectValue("username", "username.empty");
         }
 
-        if (!userRepository.existsUserByUsername(user.getUsername())) {
-            e.rejectValue("username", "wrong username");
-
-        }
 
 
         if (user.getPassword() == null || user.getPassword().equals("")) {

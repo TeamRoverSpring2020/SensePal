@@ -1,7 +1,5 @@
 package com.example.demo;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -16,10 +14,10 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Size(min=7, max=30)
+    @Size(min=1, max=30)
     private String username;
     @NotEmpty(message = "Please enter your password.")
-    @Size(min = 6, max = 15, message = "Your password must between 6 and 15 characters")
+    @Size(min = 3, message = "Your password must be longer than 6 Characters")
     private String password;
     @Email
     private String email;

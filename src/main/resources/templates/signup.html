@@ -36,6 +36,7 @@
                 <input class="input-field" type="text" name="username" placeholder="Username.." th:errorclass="error" autofocus required>
             </div>
             <p th:class="errormes" th:if="${#fields.hasErrors('username')}">Incorrect username!</p>
+            <p th:class="errormes" th:text = "${invalidUserName}"></p>
 
             <label>Enter password: </label>
             <div class="input-container">
@@ -43,6 +44,7 @@
                 <input class="input-field" type="password" name="password" placeholder="Password.." th:errorclass="error"  autofocus required>
             </div>
             <p th:class="errormes" th:if="${#fields.hasErrors('username')}">Incorrect password!</p>
+
 
             <label>Confirm password: </label>
             <div class="input-container">
