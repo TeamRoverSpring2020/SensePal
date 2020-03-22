@@ -1,8 +1,8 @@
 
-// window.onload = () => sensorData();
+window.onload = () => sensorData();
 
 function sensorData() {
-     fetch('http://localhost:8080/api/sensor-data/current')
+     fetch('http://localhost:8081/api/sensor-observation')
         .then(res => res.json())
         .then(function(data) {
                 document.getElementById("temperature").innerHTML = data.temperature,
@@ -14,6 +14,9 @@ function sensorData() {
         });
 }
 
+function getMessage(){
+    document.getElementById("temperature").innerHTML = "det gikk!";
+}
 
 function controlBoard(direction) {
     const options = {
@@ -29,7 +32,7 @@ function controlBoard(direction) {
 }
 
 
-window.setInterval(function(){
+/*window.setInterval(function(){
     sensorData()
-}, 5000);
+}, 5000);*/
 

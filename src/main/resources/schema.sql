@@ -6,3 +6,13 @@ CREATE TABLE USER(
     FIRST_NAME VARCHAR(30),
     LAST_NAME VARCHAR(30)
 );
+
+CREATE TABLE  SENSOR_OBSERVATION(
+    ID BIGINT AUTO_INCREMENT,
+    temperature DOUBLE,
+    gyroscope DOUBLE,
+    accelerometer DOUBLE,
+    magnetometer DOUBLE,
+    pressure DOUBLE,
+    humidity DOUBLE
+);

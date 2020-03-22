@@ -12,15 +12,15 @@ public class ApiController {
     @Autowired
     SensorObservationRepository sensorObservationRepository;
 
-
     @GetMapping("/api/sensor-observation")
     public SensorObservation currentObservation() {
         return sensorObservationRepository.findById(1L).get();
     }
 
+
     @PostMapping("/api/navigation")
     public void navigate(@RequestBody Navigation navigation){
-        System.out.println(navigation.toString());
+        System.out.println("hello");
     }
 
 }

@@ -1,1 +1,16 @@
-INSERT INTO USER (USERNAME, PASSWORD, EMAIL, FIRST_NAME, LAST_NAME) VALUES ('oystein_fs', '123435333', 'test@gmail.com', 'Øystein', 'Fjellvik');
+INSERT INTO USER (USERNAME, PASSWORD, EMAIL, FIRST_NAME, LAST_NAME) VALUES ('oystein_fs', '12345678', 'test@gmail.com', 'Øystein', 'Fjellvik');
+
+INSERT INTO SENSOR_OBSERVATION (
+    temperature,
+    gyroscope,
+    accelerometer,
+    magnetometer,
+    pressure,
+    humidity) VALUES(
+    50.1,
+    50.1,
+    50.1,
+    50.1,
+    50.1,
+    50.1
+    );
