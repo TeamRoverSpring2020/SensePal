@@ -14,17 +14,17 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @Size(min=7, max=30)
+    //@Size(min=7, max=30)
     private String username;
-    @NotEmpty(message = "Please enter your password.")
-    @Size(min = 6, max = 15, message = "Your password must between 6 and 15 characters")
+    //@NotEmpty(message = "Please enter your password.")
+    //@Size(min = 6, max = 15, message = "Your password must between 6 and 15 characters")
     private String password;
-    @Email
+    //@Email
     private String email;
     @Column(name = "first_name")
-    @NotEmpty(message = "Please enter your password.")
+    //@NotEmpty(message = "Please enter your password.")
     private String firstname;
-    @NotEmpty(message = "Please enter your password.")
+    //@NotEmpty(message = "Please enter your password.")
     @Column(name = "last_name")
     private String lastname;
 
