@@ -5,32 +5,45 @@
     <title>Register</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .error {
+            color: red; font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 <div class="logo">
     <img class ="logo-img" src="logo.png">
 </div>
 <div class="container">
-    <form class="register" method="POST" th:action="@{/signup}"  >
+    <form class="register" method="POST" th:action="@{/signup}" th:object="${user}"  >
         <h2 class="register-header">REGISTER</h2>
         <div>
             <label for="first">Your Name: </label><br>
             <div class="input-container">
-                <input class="input-field" id="first" type="text" name="firstname" placeholder="First Name"  autofocus>
+                <input class="input-field" id="first" type="text" name="firstname" placeholder="First Name" th:errorclass="error"  autofocus>
+
             </div>
+            <p th:class="errormes" th:if="${#fields.hasErrors('firstname')}">Incorrect value!</p>
             <div class="input-container">
-                <input class="input-field" id="last" type="text" name="lastname" placeholder="Last Name "autofocus>
+                <input class="input-field" id="last" type="text" name="lastname" th:errorclass="error" placeholder="Last Name "autofocus>
             </div>
+            <p th:class="errormes" th:if="${#fields.hasErrors('lastname')}">Incorrect value!</p>
+
             <label>Enter username: </label>
-            <div class="input-container">
+            <div class="input-container" >
                 <i class="fa fa-user icon"></i>
-                <input class="input-field" type="text" name="username" placeholder="Username.."  autofocus required>
+                <input class="input-field" type="text" name="username" placeholder="Username.." th:errorclass="error" autofocus required>
             </div>
+            <p th:class="errormes" th:if="${#fields.hasErrors('username')}">Incorrect username!</p>
+
             <label>Enter password: </label>
             <div class="input-container">
                 <i class="fa fa-key icon"></i>
-                <input class="input-field" type="password" name="password" placeholder="Password.."  autofocus required>
+                <input class="input-field" type="password" name="password" placeholder="Password.." th:errorclass="error"  autofocus required>
             </div>
+            <p th:class="errormes" th:if="${#fields.hasErrors('username')}">Incorrect password!</p>
+
             <label>Confirm password: </label>
             <div class="input-container">
                 <i class="fa fa-key icon"></i>
@@ -39,7 +52,7 @@
             <label for="email">Email Address: </label>
             <div class="input-container">
                 <i class="fa fa-envelope icon"></i>
-                <input class="input-field" id="email" type="email" placeholder="Enter email.."  name="email" autofocus>
+                <input class="input-field" id="email" type="email" placeholder="Enter email.." th:errorclass="error" name="email" autofocus>
             </div>
             <button class="btn" id="form_button">Submit</button>
         </div>
