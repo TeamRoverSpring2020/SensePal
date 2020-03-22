@@ -11,8 +11,6 @@ import javax.validation.constraints.Size;
 @Entity
 public class User {
 
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -32,6 +30,7 @@ public class User {
 
     public User() {
     }
+
     public User(String firstname, String lastname, String email, String password, String username) {
         this.firstname = firstname;
         this.lastname = lastname;
@@ -39,7 +38,6 @@ public class User {
         this.password = password;
         this.username = username;
     }
-
 
     public int getId() {
         return id;
@@ -84,7 +82,5 @@ public class User {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
-
-
 }
 
