@@ -1,14 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <header>
     <div class="logo">
-        <img class="logo-img" src="logo.png">
+        <a href="/login">
+            <img class ="logo-img" src="logo.png">
+        </a>
     </div>
     <div class="nav">
         <a href="#">Sensor data</a>
@@ -16,56 +20,55 @@
     </div>
 </header>
 <div class="home-container">
-    <div class="camera">
-        <img src="http://81.166.35.95:8000/stream.mjpg"></img>  <!---- VIDEO HERE! ---->
+    <div class="camera-and-controll">
+        <div class="camera">
+            <img src="http://81.166.35.95:8000/stream.mjpg"></img>
+        </div>
+        <div class="control-panel">
+            <div class="arrow-container">
+                <div class="arrowup">
+                    <button class="fa fa-arrow-circle-up arw"></button>
+                </div>
+                <div class="arrowleft">
+                    <button class="fa fa-arrow-circle-left arw"></button>
+                </div>
+                <div class="arrowright">
+                    <button class="fa fa-arrow-circle-right arw"></button>
+                </div>
+                <div class="arrowdown">
+                    <button class="fa fa-arrow-circle-down arw"></button>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="side-panel">
         <table class="table">
             <caption><b>SENSOR DATA</b></caption>
             <tr>
-                <th></th>
+                <td>Temperature</td>
+                <td class="result">37,8</td>
+            </tr>
+            <tr class="row">
+                <td>Gyroscope</td>
+                <td class="result">37,8</td>
             </tr>
             <tr>
-                <td><b>Temperature</b></td>
-                <td class="result">37,8</td> <!---- SENSOR RESULT HERE! ---->
+                <td>Accelerometer</td>
+                <td class="result">37,8</td>
+            </tr>
+            <tr class="row">
+                <td>Magnetometer</td>
+                <td class="result">37,8</td>
             </tr>
             <tr>
-                <td><b>Gyroscope</b></td>
-                <td class="result">37,8</td>  <!---- SENSOR RESULT HERE! ---->
+                <td>Barometric pressure</td>
+                <td class="result">37,8</td>
             </tr>
-            <tr>
-                <td><b>Accelerometer</b></td>
-                <td class="result">37,8</td>  <!---- SENSOR RESULT HERE! ---->
-            </tr>
-            <tr>
-                <td><b>Magnetometer</b></td>
-                <td class="result">37,8</td>  <!---- SENSOR RESULT HERE! ---->
-            </tr>
-            <tr>
-                <td><b>Barometric pressure</b></td>
-                <td class="result">37,8</td>  <!---- SENSOR RESULT HERE! ---->
-            </tr>
-            <td><b>Humidity</b></td>
-            <td class="result">37,8</td>
+            <tr class="row">
+                <td>Humidity</td>
+                <td class="result">37,8</td>
             </tr>
         </table>
-
-    </div>
-    <div class="control-panel">
-        <div class="arrow-container">
-            <div class="arrowup">
-                <img src="arrowup.png">  <!---- BUTTON FUNCTION HERE! ---->
-            </div>
-            <div class="arrowleft">
-                <img src="arrowleft.png">  <!---- BUTTON FUNCTION HERE! ---->
-            </div>
-            <div class="arrowright">
-                <img src="arrowright.png">  <!---- BUTTON FUNCTION HERE! ---->
-            </div>
-            <div class="arrowdown">
-                <img src="arrowdown.png">  <!---- BUTTON FUNCTION HERE! ---->
-            </div>
-        </div>
     </div>
 </div>
 </body>
