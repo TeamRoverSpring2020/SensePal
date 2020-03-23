@@ -1,5 +1,8 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.User;
+import com.example.demo.UserRepository;
+import com.example.demo.UserValidator;
 import com.example.demo.exceptions.SameUserNameException;
 import com.example.demo.exceptions.WrongPasswordException;
 import org.springframework.beans.factory.annotation.Autowired;
