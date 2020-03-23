@@ -1,5 +1,9 @@
-package com.example.demo;
+package com.example.demo.controller;
 
+import com.example.demo.Navigation;
+import com.example.demo.NavigationRepository;
+import com.example.demo.SensorObservation;
+import com.example.demo.SensorObservationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
