@@ -47,7 +47,6 @@ h2 {
     color: rgba(255, 255, 255, 0.774);
     font-size: 25px;
     font-family: myfont;
-
 }
 
 .icon {
@@ -226,14 +225,23 @@ header {
     padding-left: 60px;
 }
 
+
 caption {
     background-color: #8D949F;
     padding: 10px;
+    color: white;
 }
 
 .table {
+    border-collapse: collapse;
     background-color: rgb(235, 235, 236);
     width: 100%;
+    border-color: #666;
+}
+
+.table td, .table th {
+    border: 1px solid rgb(87, 85, 85);
+
 }
 
 .row {
