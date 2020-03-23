@@ -18,7 +18,9 @@ function sensorData() {
 function controlBoard(dir) {
     const options = {
         method: "POST",
-        body: JSON.stringify({direction: dir}),
+        body: JSON.stringify({
+            direction: dir
+        }),
         headers: new Headers({
             "Content-Type": "application/json",
         })

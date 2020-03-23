@@ -1,9 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.Navigation;
-import com.example.demo.NavigationRepository;
-import com.example.demo.SensorObservation;
-import com.example.demo.SensorObservationRepository;
+import com.example.demo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,10 +21,9 @@ public class ApiController {
         return sensorObservationRepository.findById(1L).get();
     }
 
-    @PostMapping("/api/navigation")
+    @PostMapping(path = "/api/navigation", consumes = "application/json", produces = "application/json")
     public void navigate(@RequestBody Navigation navigation){
-        navigationRepository.save(navigation);
-        System.out.println("navigate");
+        System.out.println(navigation);
     }
 
 }
