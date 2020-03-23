@@ -17,11 +17,11 @@ public class initController {
 
     @GetMapping("/init")
     public String init(){
-        User user = userRepository.findByUsername("user");
+        User user = userRepository.findByUsername("admin");
         if(user==null){
             user = new User();
-            user.setUsername("user");
-            user.setPassword(encoder.encode("123"));
+            user.setUsername("admin");
+            user.setPassword(encoder.encode("12345678"));
             userRepository.save(user);
         }
         return "ok";

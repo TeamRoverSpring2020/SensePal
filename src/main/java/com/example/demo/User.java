@@ -9,8 +9,6 @@ import javax.validation.constraints.Size;
 @Entity
 public class User {
 
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -19,17 +17,18 @@ public class User {
     @NotEmpty(message = "Please enter your password.")
     @Size(min = 3, message = "Your password must be longer than 6 Characters")
     private String password;
-    @Email
+    //@Email
     private String email;
     @Column(name = "first_name")
-    @NotEmpty(message = "Please enter your password.")
+    //@NotEmpty(message = "Please enter your password.")
     private String firstname;
-    @NotEmpty(message = "Please enter your password.")
+    //@NotEmpty(message = "Please enter your password.")
     @Column(name = "last_name")
     private String lastname;
 
     public User() {
     }
+
     public User(String firstname, String lastname, String email, String password, String username) {
         this.firstname = firstname;
         this.lastname = lastname;
@@ -37,7 +36,6 @@ public class User {
         this.password = password;
         this.username = username;
     }
-
 
     public int getId() {
         return id;
@@ -82,7 +80,5 @@ public class User {
     public void setLastname(String lastname) {
         this.lastname = lastname;
     }
-
-
 }
 

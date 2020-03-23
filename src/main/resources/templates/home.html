@@ -6,6 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
 </head>
 <body>
 <header>
@@ -27,16 +28,16 @@
         <div class="control-panel">
             <div class="arrow-container">
                 <div class="arrowup">
-                    <button class="fa fa-arrow-circle-up arw"></button>
+                    <button class="fa fa-arrow-circle-up arw" onclick="controlBoard('drive')"></button>
                 </div>
                 <div class="arrowleft">
-                    <button class="fa fa-arrow-circle-left arw"></button>
+                    <button class="fa fa-arrow-circle-left arw" onclick="controlBoard('left')"></button>
                 </div>
                 <div class="arrowright">
-                    <button class="fa fa-arrow-circle-right arw"></button>
+                    <button class="fa fa-arrow-circle-right arw" onclick="controlBoard('right')"></button>
                 </div>
                 <div class="arrowdown">
-                    <button class="fa fa-arrow-circle-down arw"></button>
+                    <button class="fa fa-arrow-circle-down arw" onclick="controlBoard('reverse')"></button>
                 </div>
             </div>
         </div>
@@ -46,27 +47,27 @@
             <caption><b>SENSOR DATA</b></caption>
             <tr>
                 <td>Temperature</td>
-                <td class="result">37,8</td>
+                <td class="result" id="temperature">37,8</td>
             </tr>
             <tr class="row">
                 <td>Gyroscope</td>
-                <td class="result">37,8</td>
+                <td class="result" id="gyroscope">37,8</td>
             </tr>
             <tr>
                 <td>Accelerometer</td>
-                <td class="result">37,8</td>
+                <td class="result" id="accelerometer">37,8</td>
             </tr>
             <tr class="row">
                 <td>Magnetometer</td>
-                <td class="result">37,8</td>
+                <td class="result" id="magnetometer">37,8</td>
             </tr>
             <tr>
                 <td>Barometric pressure</td>
-                <td class="result">37,8</td>
+                <td class="result" id="pressure">37,8</td>
             </tr>
             <tr class="row">
                 <td>Humidity</td>
-                <td class="result">37,8</td>
+                <td class="result" id="humidity">37,8</td>
             </tr>
         </table>
     </div>
