@@ -47,7 +47,6 @@ h2 {
     color: rgba(255, 255, 255, 0.774);
     font-size: 25px;
     font-family: myfont;
-
 }
 
 .icon {
@@ -83,6 +82,23 @@ form {
     opacity: 0.9;
 }
 
+.signup {
+    text-align: center;
+    text-decoration: none;
+    color: rgb(3, 88, 141);
+    padding-top: 15px;
+}
+
+.signup-ref {
+    text-decoration: none;
+    color: rgb(3, 88, 141);
+}
+
+
+.signup-ref:hover {
+    text-decoration: underline;
+    color: rgb(3, 88, 141);
+}
 
 .btn:hover {
     background-color: rgb(5, 62, 97);
@@ -135,13 +151,14 @@ form {
     font-size: small;
 }
 
+
 /*---------------------------------*/
 
 /*----------- HOME PAGE ---------*/
 
 
 .control-panel {
-    width: 100%;
+
 }
 
 .nav {
@@ -176,6 +193,72 @@ header {
     float: left;
 }
 
+
+.row-heading {
+    background-color: rgb(114, 116, 124);
+    padding: 5px;
+}
+
+.row-heading h2 {
+    color: white;
+    font-size: 18px;
+}
+
+.camera-and-controll {
+    float: left;
+    width: 650px;
+    margin-right: 90px;
+}
+
+
+.data {
+
+    float: left;
+    padding: 5px;
+}
+
+.side-panel {
+    float: left;
+}
+
+.result {
+    padding-left: 60px;
+}
+
+
+caption {
+    background-color: #8D949F;
+    padding: 10px;
+    color: white;
+}
+
+.table {
+    border-collapse: collapse;
+    background-color: rgb(235, 235, 236);
+    width: 100%;
+    border-color: #666;
+}
+
+.table td, .table th {
+    border: 1px solid rgb(87, 85, 85);
+
+}
+
+.row {
+    background-color: rgb(206, 206, 207);
+}
+
+td {
+    padding: 10px;
+}
+
+
+.arrow {
+    color: #8D949F;
+    background-color: aqua;
+}
+
+
 .home-container {
     margin: auto;
     margin-left: 15%;
@@ -192,6 +275,23 @@ header {
     overflow: hidden;
 }
 
+/*------- ARROWS -----*/
+
+.arw {
+    padding: 0px;
+    text-align: center;
+    font-size: 25px;
+    height: 60px;
+    border-color: white;
+    color: rgb(5, 62, 97);
+}
+
+.arw:active {
+    color: rgb(20, 97, 148);
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
 .arrow-container {
     margin: auto;
     background-color: rgb(242, 242, 243);
@@ -201,48 +301,23 @@ header {
 
 .arrowleft {
     float: left;
+    font-size: 55px;
+    padding-left: 10px;
 }
 
 .arrowright {
     float: left;
-    padding-left: 52px;
+    padding-left: 60px;
+    font-size: 55px;
 }
 
 .arrowup {
-    padding-left: 60px;
+    text-align: center;
+    font-size: 55px;
 }
 
 .arrowdown {
     float: left;
-    padding-left: 60px;
+    padding-left: 65px;
+    font-size: 55px;
 }
-
-.row-heading {
-    background-color: rgb(114, 116, 124);
-    padding: 5px;
-}
-
-.row-heading h2 {
-    color: white;
-    font-size: 18px;
-}
-
-.row1 {
-    background-color: rgb(206, 206, 207);
-    padding: 5px;
-}
-
-.row {
-    background-color: rgb(235, 235, 236);
-    padding: 5px;
-}
-
-.data {
-    float: left;
-    padding: 5px;
-}
-
-.result {
-    padding-left: 60px;
-}
-

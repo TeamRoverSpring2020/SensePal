@@ -5,15 +5,12 @@
     <title>Register</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        .error {
-            color: red; font-weight: bold;
-        }
-    </style>
 </head>
 <body>
 <div class="logo">
+    <a href="/login">
     <img class ="logo-img" src="logo.png">
+    </a>
 </div>
 <div class="container">
     <form class="register" method="POST" th:action="@{/signup}" th:object="${user}"  >
@@ -22,7 +19,6 @@
             <label for="first">Your Name: </label><br>
             <div class="input-container">
                 <input class="input-field" id="first" type="text" name="firstname" placeholder="First Name" th:errorclass="error"  autofocus>
-
             </div>
             <p th:class="errormes" th:if="${#fields.hasErrors('firstname')}">Incorrect value!</p>
             <div class="input-container">
