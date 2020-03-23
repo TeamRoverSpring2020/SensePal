@@ -12,10 +12,14 @@
     </div>
     <div class="nav">
         <a href="#">Sensor data</a>
-        <a class="active" href="#">Sign out</a>
+            <form th:action="@{/logout}" method="post">
+        <input class="active" type="submit" value="Signout">
+            </form>
     </div>
 </header>
+<p th:text="${'Welcome ' + #httpServletRequest.remoteUser}"></p>
 <div class="home-container">
+
     <div class="camera">
         <img src="http://81.166.35.95:8000/stream.mjpg"></img>  <!---- VIDEO HERE! ---->
     </div>

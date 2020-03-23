@@ -16,11 +16,11 @@
         <h2 class="phrase2">WHEN YOU CAN'T</h2>
     </div>
     <div class="right-content">
-        <form method="POST" th:action="@{/login}">
+        <form method="POST" th:action="@{/login}" th:object="${user}">
             <h2>Login</h2>
             <div class="input-container">
                 <i class="fa fa-user icon"></i>
-                <input class="input-field" type="text" placeholder="Username" name="username">
+                <input class="input-field" type="text" placeholder="Username"  th:field="*{username}">
             </div>
             <div class="input-container">
                 <i class="fa fa-key icon"></i>
