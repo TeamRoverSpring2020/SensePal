@@ -14,15 +14,16 @@ public class User {
     private int id;
     @Size(min=1, max=30)
     private String username;
-    @NotEmpty(message = "Please enter your password.")
-    @Size(min = 3, message = "Your password must be longer than 6 Characters")
+    @NotEmpty
+    @Size(min = 3)
     private String password;
-    //@Email
+    @Email
+    @NotEmpty
     private String email;
     @Column(name = "first_name")
-    //@NotEmpty(message = "Please enter your password.")
+    @NotEmpty(message = "Please enter your password.")
     private String firstname;
-    //@NotEmpty(message = "Please enter your password.")
+    @NotEmpty(message = "Please enter your password.")
     @Column(name = "last_name")
     private String lastname;
 

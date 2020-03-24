@@ -28,4 +28,11 @@ class DemoApplicationTests {
         Assertions.assertFalse(userRepository.existsUserByUsername("hej"));
     }
 
+
+    @Test
+    public void isEmailInTheDatabase(){
+        Assertions.assertTrue(userRepository.existsByEmail("krister.andersson@medisin.uio.no"));
+        Assertions.assertFalse(userRepository.existsUserByUsername("hej"));
+    }
+
 }
