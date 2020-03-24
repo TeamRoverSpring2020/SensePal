@@ -303,6 +303,7 @@ td {
     border-radius: 100px;
 }
 
+
 .arrowleft {
     float: left;
     font-size: 50px;
@@ -311,8 +312,21 @@ td {
 
 .arrowright {
     float: left;
-    padding-left: 78px;
+    padding-left: 18px;
     font-size: 50px;
+}
+
+.stop {
+    border-radius: 100px;
+    padding: 10px;
+    color: #122C45;
+}
+
+.stopbutton {
+    float: left;
+    padding-left: 20px;
+    padding-top: 10px;
+    font-size: 20px;
 }
 
 .arrowup {
