@@ -18,16 +18,18 @@ function sensorData() {
 function controlBoard(dir) {
     const options = {
         method: "POST",
-        body: JSON.stringify({direction: dir}),
+        credentials: "include",
+        body: JSON.stringify({
+            direction: dir
+        }),
         headers: new Headers({
             "Content-Type": "application/json",
         })
     }
 
-    fetch('http://localhost:8081/api/navigation', options)
+    fetch('/api/navigation', options)
         .then(response => console.log(response));
 }
-
 
 
 /*window.setInterval(function(){

@@ -32,5 +32,9 @@ public class UserValidator  implements Validator {
             e.rejectValue("password", "incorrect");
         }
 
+        if (user.getPassword() == null || user.getPassword().equals("")) {
+            e.rejectValue("password", "incorrect");
+        }
+
     }
 }

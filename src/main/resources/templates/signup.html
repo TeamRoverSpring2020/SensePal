@@ -18,6 +18,7 @@
         <div>
             <label for="first">Your Name: </label><br>
             <div class="input-container">
+<<<<<<< HEAD
                 <input class="input-field" id="first" type="text" name="firstname" placeholder="First Name"
                        th:errorclass="error" autofocus>
             </div>
@@ -25,14 +26,25 @@
             <div class="input-container">
                 <input class="input-field" id="last" type="text" name="lastname" th:errorclass="error"
                        placeholder="Last Name " autofocus>
+=======
+                <input class="input-field" id="first" type="text" th:field="*{firstname}" name="firstname" placeholder="First Name" th:errorclass="error" autofocus>
+            </div>
+            <p th:class="errormes" th:if="${#fields.hasErrors('firstname')}">Incorrect value!</p>
+            <div class="input-container">
+                <input class="input-field" id="last" type="text" th:field="*{lastname}" name="lastname" th:errorclass="error" placeholder="Last Name" autofocus>
+>>>>>>> 3d387276ff9abbbea3f86300fea20aaaa30e3397
             </div>
             <p th:class="errormes" th:if="${#fields.hasErrors('lastname')}">Incorrect value!</p>
 
             <label>Enter username: </label>
             <div class="input-container">
                 <i class="fa fa-user icon"></i>
+<<<<<<< HEAD
                 <input class="input-field" type="text" name="username" placeholder="Username.." th:errorclass="error"
                        autofocus required>
+=======
+                <input class="input-field" type="text" name="username" placeholder="Username.." th:field="*{username}" th:errorclass="error" autofocus required>
+>>>>>>> 3d387276ff9abbbea3f86300fea20aaaa30e3397
             </div>
             <p th:class="errormes" th:if="${#fields.hasErrors('username')}">Incorrect username!</p>
             <p th:class="errormes" th:text="${invalidUserName}"></p>
@@ -40,8 +52,12 @@
             <label>Enter password: </label>
             <div class="input-container">
                 <i class="fa fa-key icon"></i>
+<<<<<<< HEAD
                 <input class="input-field" type="password" name="password" placeholder="Password.."
                        th:errorclass="error" autofocus required>
+=======
+                <input class="input-field" type="password" name="password" th:field="*{password}" placeholder="Password.." th:errorclass="error"  autofocus required>
+>>>>>>> 3d387276ff9abbbea3f86300fea20aaaa30e3397
             </div>
             <p th:class="errormes" th:if="${#fields.hasErrors('username')}">Incorrect password!</p>
 
@@ -54,9 +70,14 @@
             <label for="email">Email Address: </label>
             <div class="input-container">
                 <i class="fa fa-envelope icon"></i>
+<<<<<<< HEAD
                 <input class="input-field" id="email" type="email" placeholder="Enter email.." th:errorclass="error"
                        name="email" autofocus>
+=======
+                <input class="input-field" id="email" type="email" placeholder="Enter email.." th:field="*{email}" th:errorclass="error" name="email" autofocus>
+>>>>>>> 3d387276ff9abbbea3f86300fea20aaaa30e3397
             </div>
+            <p th:class="errormes" th:if="${#fields.hasErrors('email')}">Incorrect email address!</p>
             <button class="btn" id="form_button">Submit</button>
         </div>
     </form>
