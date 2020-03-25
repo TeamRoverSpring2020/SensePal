@@ -56,10 +56,12 @@ let chart = new Chart(myChart, {
         title:{
             display:true,
             text: 'SenseGraph',
-            fontSize: 18,
+            fontSize: 20,
+            marginBottom: 20,
         },
         legend:{
-            position: 'right',
+            position: 'bottom',
+            padding: 20,
             labels: {
                 fontColor: 'black'
             }
