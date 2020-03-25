@@ -1,5 +1,7 @@
 
 window.onload = () => sensorData();
+document.onkeydown = checkKey;
+
 
 function sensorData() {
      fetch('/api/sensor-observation')
@@ -10,7 +12,6 @@ function sensorData() {
                 document.getElementById("humidity").innerHTML = data.humidity + " %"
         });
 }
-
 
 function controlBoard(dir) {
     const options = {
@@ -32,6 +33,29 @@ function controlBoard(dir) {
 window.setInterval(function(){
     sensorData()
 }, 3000);
+
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        controlBoard('drive')
+    }
+    else if (e.keyCode == '40') {
+        controlBoard('reverse')
+    }
+    else if (e.keyCode == '37') {
+        controlBoard('left')
+    }
+    else if (e.keyCode == '39') {
+        controlBoard('right')
+    }
+    else if (e.keyCode == '32') {
+        controlBoard('stop')
+    }
+}
+
 
 
 
