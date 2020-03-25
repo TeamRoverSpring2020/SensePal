@@ -6,9 +6,6 @@ function sensorData() {
         .then(res => res.json())
         .then(function(data) {
                 document.getElementById("temperature").innerHTML = data.temperature,
-                document.getElementById("gyroscope").innerHTML = data.gyroscope,
-                document.getElementById("accelerometer").innerHTML = data.accelerometer,
-                document.getElementById("magnetometer").innerHTML = data.magnetometer,
                 document.getElementById("pressure").innerHTML = data.pressure,
                 document.getElementById("humidity").innerHTML = data.humidity
         });

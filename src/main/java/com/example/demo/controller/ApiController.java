@@ -12,29 +12,25 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ApiController {
 
- /*   @Autowired
-    SensorObservationRepository sensorObservationRepository;
-
     @Autowired
-    NavigationApi navigationApi;
+    SensorObservationRepository sensorObservationRepository;
+/*
+    @Autowired
+    NavigationApi navigationApi;*/
 
-/*    @GetMapping("/api/sensor-observation")
+    @GetMapping("/api/sensor-observation")
     public SensorObservation currentObservation() {
-        return sensorObservationRepository.findById(1L).get();
+        //return new SensorObservation();
+        System.out.println(sensorObservationRepository.findById(1).get());
 
-    }*/
+        return sensorObservationRepository.findById(1).get();
+    }
 
     @PostMapping(path = "/api/navigation", consumes = "application/json", produces = "application/json")
     public void navigate(@RequestBody Navigation navigation){
             //navigationApi.navigationState(navigation.getDirection());
-            System.out.println(navigation.toString());
+            System.out.println(navigation.getDirection());
     }
-
-/*    @PostMapping(path = "/api/navigation", consumes = "application/json", produces = "application/json")
-    public void navigate(){
-        //navigationApi.navigationState(navigation.getDirection());
-        System.out.println("hello world");
-    }*/
 
 }
 

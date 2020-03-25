@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDateTime;
 
 @Entity
 public class SensorObservation {
@@ -14,9 +13,10 @@ public class SensorObservation {
     private int id;
 
     //private static LocalDateTime dateTime;
-    private static String temp;
-    private static String fukt;
-    private static String trykk;
+    private String temperature;
+    private String humidity;
+    private String pressure;
+
 
     public SensorObservation() {
     }
@@ -29,23 +29,23 @@ public class SensorObservation {
         this.trykk = trykk;
     }*/
 
-    public static void updateData(){
+    public void updateData(){
         SenseHatMethods senseHatMethods = new SenseHatMethods();
-        temp = String.format("%.01f", senseHatMethods.getTemperature());
-        fukt = String.format("%.01f", senseHatMethods.getHumidity());
-        trykk = String.format("%.01f", senseHatMethods.getPressure());
+        temperature = String.format("%.01f", senseHatMethods.getTemperature());
+        humidity = String.format("%.01f", senseHatMethods.getHumidity());
+        pressure = String.format("%.01f", senseHatMethods.getPressure());
     }
 
-    public static String getTemp() {
-        return temp;
+    public String getTemperature() {
+        return temperature;
     }
 
-    public static String getFukt() {
-        return fukt;
+    public String getHumidity() {
+        return humidity;
     }
 
-    public static String getTrykk() {
-        return trykk;
+    public String getPressure() {
+        return pressure;
     }
 
 
