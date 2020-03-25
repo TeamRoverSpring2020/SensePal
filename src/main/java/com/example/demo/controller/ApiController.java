@@ -22,7 +22,6 @@ public class ApiController {
     public SensorObservation currentObservation() {
         //return new SensorObservation();
         System.out.println(sensorObservationRepository.findById(1).get());
-
         return sensorObservationRepository.findById(1).get();
     }
 
@@ -33,5 +32,3 @@ public class ApiController {
     }
 
 }
-
-
