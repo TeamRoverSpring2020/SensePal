@@ -17,11 +17,8 @@
         </a>
     </div>
     <div class="nav">
-        <a href="#">Sensor data</a>
-        <a class="active" th:action="@{/logout}" method="post" value="Signout">Sign out
-        </a>
         <form th:action="@{/logout}" method="post">
-            <input type="submit" value="sign-out">
+            <input class ="signout" type="submit" value="Sign out">
         </form>
     </div>
 </header>

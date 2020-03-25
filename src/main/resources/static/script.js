@@ -5,9 +5,9 @@ function sensorData() {
      fetch('/api/sensor-observation')
         .then(res => res.json())
         .then(function(data) {
-                document.getElementById("temperature").innerHTML = data.temperature,
-                document.getElementById("pressure").innerHTML = data.pressure,
-                document.getElementById("humidity").innerHTML = data.humidity
+                document.getElementById("temperature").innerHTML = data.temperature + " C",
+                document.getElementById("pressure").innerHTML = data.pressure + " mBar",
+                document.getElementById("humidity").innerHTML = data.humidity + " %"
         });
 }
 
