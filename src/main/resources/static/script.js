@@ -2,7 +2,7 @@
 window.onload = () => sensorData();
 
 function sensorData() {
-     fetch('http://localhost:8081/api/sensor-observation')
+     fetch('/api/sensor-observation')
         .then(res => res.json())
         .then(function(data) {
                 document.getElementById("temperature").innerHTML = data.temperature,
@@ -29,9 +29,9 @@ function controlBoard(dir) {
 }
 
 
-/*window.setInterval(function(){
+window.setInterval(function(){
     sensorData()
-}, 5000);*/
+}, 3000);
 
 
 

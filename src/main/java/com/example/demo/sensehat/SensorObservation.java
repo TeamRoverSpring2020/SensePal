@@ -13,30 +13,34 @@ public class SensorObservation {
     private int id;
 
     //private static LocalDateTime dateTime;
-    private String temperature;
-    private String humidity;
-    private String pressure;
+    private Double temperature;
+    private Double humidity;
+    private Double pressure;
 
     public SensorObservation(){
         //updateData();
+        SenseHatMethods senseHatMethods = new SenseHatMethods();
+        this.temperature = senseHatMethods.getTemperature();
+        this.humidity = senseHatMethods.getHumidity();
+        this.pressure = senseHatMethods.getPressure();
     }
 
-    public void updateData(){
+  /*  public void updateData(){
         SenseHatMethods senseHatMethods = new SenseHatMethods();
         this.temperature = String.format("%.01f", senseHatMethods.getTemperature());
         this.humidity = String.format("%.01f", senseHatMethods.getHumidity());
         this.pressure = String.format("%.01f", senseHatMethods.getPressure());
-    }
+    }*/
 
-    public String getTemperature() {
+    public Double getTemperature() {
         return temperature;
     }
 
-    public String getHumidity() {
+    public Double getHumidity() {
         return humidity;
     }
 
-    public String getPressure() {
+    public Double getPressure() {
         return pressure;
     }
 
