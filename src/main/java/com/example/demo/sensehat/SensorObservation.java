@@ -11,7 +11,7 @@ public class SensorObservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
 
     //private static LocalDateTime dateTime;
     private static String temp;
