@@ -21,7 +21,7 @@ public class ApiController {
     @GetMapping("/api/sensor-observation")
     public SensorObservation currentObservation() {
         return sensorObservationRepository.findById(1L).get();
-    }*/
+
 
     @PostMapping(path = "/api/navigation", consumes = "application/json", produces = "application/json")
     public void navigate(@RequestBody Navigation navigation){
@@ -29,4 +29,4 @@ public class ApiController {
         System.out.println(navigation);
     }
 
-}*/
+} */

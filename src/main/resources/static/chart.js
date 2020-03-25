@@ -65,4 +65,4 @@ let chart = new Chart(myChart, {
             }
         }
     }
-})
+});
