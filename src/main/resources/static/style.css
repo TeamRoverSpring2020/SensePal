@@ -177,6 +177,10 @@ form {
     padding-right: 25px;
 }
 
+.nav a:hover {
+    color: rgb(85, 171, 241);
+}
+
 header {
     background-color: gray;
 }
@@ -288,7 +292,8 @@ td {
 }
 
 .arw:hover {
-    color: rgb(152, 186, 214);
+    color: rgb(85, 171, 241);
+    cursor: pointer;
 }
 
 .arw:active {
@@ -320,6 +325,11 @@ td {
     border-radius: 100px;
     padding: 10px;
     color: #122C45;
+}
+
+.stop:hover {
+    cursor: pointer;
+    color: rgb(85, 171, 241);
 }
 
 .stopbutton {
