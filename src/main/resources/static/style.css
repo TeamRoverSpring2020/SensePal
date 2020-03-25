@@ -94,7 +94,6 @@ form {
     color: rgb(3, 88, 141);
 }
 
-
 .signup-ref:hover {
     text-decoration: underline;
     color: rgb(3, 88, 141);
@@ -190,16 +189,20 @@ header {
     height: 400px;
     width: 640px;
     float: left;
-    margin-right: 30px;
+    margin-right: 25px;
 }
 
 .side-panel {
-
-    height: 450px;
-    width: 300px;
     float: left;
+    background-color: rgb(241, 241, 245);
+    height: 400px;
+    width: 350px;
 }
 
+#MyChart {
+    padding: 15px;
+    margin-top: 30px;
+}
 
 .row-heading {
     background-color: rgb(114, 116, 124);
@@ -222,14 +225,9 @@ header {
     padding: 5px;
 }
 
-.side-panel {
-    float: left;
-}
-
 .result {
-    padding-left: 60px;
+    padding-left: 30px;
 }
-
 
 caption {
     background-color: #4F6373;
@@ -246,22 +244,19 @@ caption {
 
 .table td, .table th {
     border: 1px solid rgb(87, 85, 85);
-
 }
 
 .row {
-    background-color: rgb(197, 208, 216);
+    background-color: rgba(197, 208, 216, 0.774);
 }
 
 td {
     padding: 10px;
 }
 
-
 .arrow {
     color: #8D949F;
 }
-
 
 .home-container {
     margin: auto;
@@ -291,6 +286,10 @@ td {
     background-color: #4F6373;
 }
 
+.arw:focus, .stop:focus {
+    outline: none;
+}
+
 .arw:hover {
     color: rgb(85, 171, 241);
     cursor: pointer;
@@ -307,7 +306,6 @@ td {
     overflow: hidden;
     border-radius: 100px;
 }
-
 
 .arrowleft {
     float: left;
