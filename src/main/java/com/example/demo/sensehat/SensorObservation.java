@@ -1,17 +1,33 @@
 package com.example.demo.sensehat;
 
-class SenseObjekt {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.time.LocalDateTime;
 
+@Entity
+public class SensorObservation {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    //private static LocalDateTime dateTime;
     private static String temp;
     private static String fukt;
     private static String trykk;
 
-    public SenseObjekt(){
+    public SensorObservation() {
+    }
+
+    /* public SenseObjekt(){
         updateData();
+        this.dateTime = LocalDateTime.now();
         this.temp = temp;
         this.fukt = fukt;
         this.trykk = trykk;
-    }
+    }*/
 
     public static void updateData(){
         SenseHatMethods senseHatMethods = new SenseHatMethods();

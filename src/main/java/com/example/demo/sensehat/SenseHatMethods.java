@@ -28,8 +28,8 @@ public class SenseHatMethods {
         return (getTemperatureFromHumidity() + getTemperatureFromHumidity()) / 2;
     }
 
-    public static SenseObjekt returnSenseObjekt(){
-        SenseObjekt sensObj = new SenseObjekt();
+    public static SensorObservation returnSenseObjekt(){
+        SensorObservation sensObj = new SensorObservation();
         return sensObj;
     }
 }
