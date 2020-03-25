@@ -32,16 +32,19 @@
         <div class="control-panel">
             <div class="arrow-container">
                 <div class="arrowup">
-                    <button class="fa fa-arrow-circle-up arw" onclick="controlBoard('drive')"></button>
+                    <button class="fa fa-angle-up arw" onclick="controlBoard('drive')"></button>
                 </div>
                 <div class="arrowleft">
-                    <button class="fa fa-arrow-circle-left arw" onclick="controlBoard('left')"></button>
+                    <button class="fa fa-angle-left arw" onclick="controlBoard('left')"></button>
+                </div>
+                <div class="stopbutton">
+                    <button class="fa fa-stop stop"></button>
                 </div>
                 <div class="arrowright">
-                    <button class="fa fa-arrow-circle-right arw" onclick="controlBoard('right')"></button>
+                    <button class="fa fa-angle-right arw" onclick="controlBoard('right')"></button>
                 </div>
                 <div class="arrowdown">
-                    <button class="fa fa-arrow-circle-down arw" onclick="controlBoard('reverse')"></button>
+                    <button class="fa fa-angle-down arw" onclick="controlBoard('reverse')"></button>
                 </div>
             </div>
         </div>
@@ -66,7 +69,7 @@
                 <td class="result" id="magnetometer">37,8</td>
             </tr>
             <tr>
-                <td>Barometric pressure</td>
+                <td>Pressure</td>
                 <td class="result" id="pressure">37,8</td>
             </tr>
             <tr class="row">
