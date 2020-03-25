@@ -2,6 +2,7 @@ package com.example.demo;
 
 import com.pi4j.io.gpio.*;
 import org.springframework.context.annotation.Bean;
+import org.springframework.stereotype.Component;
 
 public class NavigationApi {
 

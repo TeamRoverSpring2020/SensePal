@@ -13,16 +13,18 @@ public class ApiController {
     @Autowired
     SensorObservationRepository sensorObservationRepository;
 
-    //NavigationApi navigationApi = new NavigationApi();
+/*    @Autowired
+    NavigationApi navigationApi;*/
 
     @GetMapping("/api/sensor-observation")
     public SensorObservation currentObservation() {
         return sensorObservationRepository.findById(1L).get();
     }
 
-    /*@PostMapping(path = "/api/navigation", consumes = "application/json", produces = "application/json")
-    public void navigate(@RequestBody String direction){
-        navigationApi.navigationState(direction);
-    }*/
+    @PostMapping(path = "/api/navigation", consumes = "application/json", produces = "application/json")
+    public void navigate(@RequestBody Navigation navigation){
+        //navigationApi.navigationState(navigation.getDirection());
+        System.out.println(navigation);
+    }
 
 }
