@@ -17,23 +17,15 @@ public class SensorObservation {
     private String humidity;
     private String pressure;
 
-
-    public SensorObservation() {
+    public SensorObservation(){
+        //updateData();
     }
-
-    /* public SenseObjekt(){
-        updateData();
-        this.dateTime = LocalDateTime.now();
-        this.temp = temp;
-        this.fukt = fukt;
-        this.trykk = trykk;
-    }*/
 
     public void updateData(){
         SenseHatMethods senseHatMethods = new SenseHatMethods();
-        temperature = String.format("%.01f", senseHatMethods.getTemperature());
-        humidity = String.format("%.01f", senseHatMethods.getHumidity());
-        pressure = String.format("%.01f", senseHatMethods.getPressure());
+        this.temperature = String.format("%.01f", senseHatMethods.getTemperature());
+        this.humidity = String.format("%.01f", senseHatMethods.getHumidity());
+        this.pressure = String.format("%.01f", senseHatMethods.getPressure());
     }
 
     public String getTemperature() {
