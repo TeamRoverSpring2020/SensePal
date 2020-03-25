@@ -18,18 +18,13 @@ public class SensorObservation {
     private Double pressure;
 
     public SensorObservation(){
-        //updateData();
+    }
+
+/*    public SensorObservation(){
         SenseHatMethods senseHatMethods = new SenseHatMethods();
         this.temperature = senseHatMethods.getTemperature();
         this.humidity = senseHatMethods.getHumidity();
         this.pressure = senseHatMethods.getPressure();
-    }
-
-  /*  public void updateData(){
-        SenseHatMethods senseHatMethods = new SenseHatMethods();
-        this.temperature = String.format("%.01f", senseHatMethods.getTemperature());
-        this.humidity = String.format("%.01f", senseHatMethods.getHumidity());
-        this.pressure = String.format("%.01f", senseHatMethods.getPressure());
     }*/
 
     public Double getTemperature() {
