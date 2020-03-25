@@ -60,7 +60,8 @@ let chart = new Chart(myChart, {
             marginBottom: 20,
         },
         legend:{
-            position: 'right',
+            position: 'bottom',
+            padding: 20,
             labels: {
                 fontColor: 'black'
             }

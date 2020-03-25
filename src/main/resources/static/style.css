@@ -213,15 +213,19 @@ header {
 .side-panel {
     float: left;
     background-color: rgb(241, 241, 245);
-    height: 400px;
+    height: 575px;
     width: 400px;
 }
 
-#MyChart {
-padding: 15px;
-margin-top: 30px;
-height: 240px;
-width: 400px;
+.Container {
+    padding-top: 80px;
+}
+
+element.style {
+    padding: 15px;
+    margin-top: 30px;
+    height: 290px;
+    width: 410px;
 }
 
 .row-heading {
