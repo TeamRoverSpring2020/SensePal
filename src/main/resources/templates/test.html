@@ -34,7 +34,7 @@
                 type: 'line', // bar,orizontalbar, pie,line,doughnut
                 data:{
                     labels:[   /*[# th:each="item, iterStat : ${sensorObservationList}"]*/
-                        -              - /*[(${iterStat.count})]*/undefined,
+                                       /*[(${#temporals.format(item.getTimestamp(), 'HH:mm')})]*/undefined,
                         /*[/]*/],
                     datasets:[{
                         label: 'Humidity',

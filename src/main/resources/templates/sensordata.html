@@ -86,7 +86,7 @@
                 type: 'line', // bar,orizontalbar, pie,line,doughnut
                 data:{
                     labels:[   /*[# th:each="item, iterStat : ${sensorObservationList}"]*/
-                        -              - /*[(${iterStat.count})]*/undefined,
+                        -              - /*[(${item.getHumidity()})]*/undefined,
                         /*[/]*/],
                     datasets:[{
                         label: 'Humidity',
@@ -134,7 +134,7 @@
                 type: 'line', // bar,orizontalbar, pie,line,doughnut
                 data:{
                     labels:[   /*[# th:each="item : ${sensorObservationList}"]*/
-                        -               /*[${#temporals.format(item.getTimestamp(),'yyyy-MM-dd HH:mm:ss)}]*/undefined,
+                        -               -/*[(${#temporals.format(item.getTimestamp(), 'HH:mm')})]*/undefined,
                         /*[/]*/],
                     datasets:[{
                         label: 'Pressure',
