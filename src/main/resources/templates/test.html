@@ -7,7 +7,7 @@
     <title>Test</title>
 </head>
 <body>
-<!--<table style="text-align:left">
+<table style="text-align:left">
 
     <p class="result" id="temperature" th:text="${sensorObservation.getTemperature()}"></p>
     <tr>
@@ -15,10 +15,12 @@
         <th>Hum</th>
     </tr>
     <tr th:each="item : ${sensorObservationList}">
-        <th th:text="${item.getTemperature()}"></th>
+        <th th:text="${#temporals.format(item.getTimestamp(), 'dd/MMM/yyyy HH:mm')}"></th>
         <th th:text="${item.getHumidity()}"></th>
     </tr>
-</table>-->
+</table>
+
+
 <div class="Container">
     <canvas id="MyChart">
 
