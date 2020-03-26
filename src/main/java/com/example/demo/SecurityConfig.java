@@ -20,7 +20,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/login", "/style.css", "/*.png", "/*.ttf", "/init", "/signup", "/test", "/sensordata").permitAll()
+                .antMatchers("/login", "/style.css", "/*.png", "/*.ttf", "/init", "/signup", "/sensordata").permitAll()
                 .antMatchers("/admin").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
@@ -28,7 +28,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/login").permitAll().defaultSuccessUrl("/home", true).permitAll();
 
         http.csrf().disable();
-        //http.headers().frameOptions().disable();
     }
 
     @Autowired
