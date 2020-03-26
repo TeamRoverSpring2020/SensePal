@@ -29,16 +29,18 @@ public class SensorObservation {
     }
 
     public String getTemperature() {
-        return temperature;
+        return String.format("%.05S",temperature);
     }
 
     public String getHumidity() {
-        return humidity;
+        return String.format("%.05S",humidity);
     }
 
     public String getPressure() {
-        return pressure;
+
+        return String.format("%.05S",pressure);
     }
+
 
 
 }

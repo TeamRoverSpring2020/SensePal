@@ -31,4 +31,7 @@ public class ApiController {
             System.out.println(navigation.getDirection());
     }
 
+    @GetMapping("/test")
+    public List<SensorObservation>
+
 }
