@@ -39,7 +39,7 @@
                     <button class="fa fa-angle-left arw" onclick="controlBoard('left')"></button>
                 </div>
                 <div class="stopbutton">
-                    <button class="fa fa-stop stop"></button>
+                    <button class="fa fa-stop stop" onclick="controlBoard('stop')"></button>
                 </div>
                 <div class="arrowright">
                     <button class="fa fa-angle-right arw" onclick="controlBoard('right')"></button>
@@ -54,17 +54,22 @@
         <table class="table">
             <caption><b>SENSOR DATA</b></caption>
             <tr>
+                <td>Time</td>
+                <td class="result" id="timestamp">37,8</td>
+            </tr>
+            <tr>
                 <td>Temperature</td>
                 <td class="result" id="temperature" th:text="${sensorObservation.getTemperature()}"></td>
-            </tr>
-            <tr class="row">
-                <td>Pressure</td>
-                <td class="result" id="pressure">37,8</td>
             </tr>
             <tr>
                 <td>Humidity</td>
                 <td class="result" id="humidity">37,8</td>
             </tr>
+            <tr class="row">
+                <td>Pressure</td>
+                <td class="result" id="pressure">37,8</td>
+            </tr>
+
         </table>
         <div class="Container">
             <canvas id="MyChart">

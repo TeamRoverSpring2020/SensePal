@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
 
 @Entity
 public class SensorObservation {
@@ -12,35 +13,51 @@ public class SensorObservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    //private static LocalDateTime dateTime;
-    private String temperature;
-    private String humidity;
-    private String pressure;
+    private LocalDateTime timestamp;
+    private Double temperature;
+    private Double humidity;
+    private Double pressure;
 
     public SensorObservation(){
-        //updateData();
     }
 
-    public void updateData(){
+/*    public SensorObservation(){
         SenseHatMethods senseHatMethods = new SenseHatMethods();
-        this.temperature = String.format("%.01f", senseHatMethods.getTemperature());
-        this.humidity = String.format("%.01f", senseHatMethods.getHumidity());
-        this.pressure = String.format("%.01f", senseHatMethods.getPressure());
+        this.timestamp = LocalDateTime.now();
+        this.temperature = senseHatMethods.getTemperature();
+        this.humidity = senseHatMethods.getHumidity();
+        this.pressure = senseHatMethods.getPressure();
+    }*/
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
     }
 
-    public String getTemperature() {
-        return String.format("%.05S",temperature);
+
+    public void setTimestamp(LocalDateTime timestamp) {
+        this.timestamp = timestamp;
     }
 
-    public String getHumidity() {
-        return String.format("%.05S",humidity);
+    public Double getTemperature() {
+        return temperature;
     }
 
-    public String getPressure() {
-
-        return String.format("%.05S",pressure);
+    public void setTemperature(Double temperature) {
+        this.temperature = temperature;
     }
 
+    public Double getHumidity() {
+        return humidity;
+    }
+
+    public void setHumidity(Double humidity) {
+        this.humidity = humidity;
+
+    }
+
+    public Double getPressure() {
+        return pressure;
+    }
 
 
 }

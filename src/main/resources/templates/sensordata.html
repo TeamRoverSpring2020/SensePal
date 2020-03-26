@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<body>
+<header>
+    <div class="logo">
+        <a href="/login">
+            <img class="logo-img" src="logo.png">
+        </a>
+    </div>
+    <div class="nav">
+        <form th:action="@{/logout}" method="post">
+            <input class ="signout" type="submit" value="Sign out">
+        </form>
+    </div>
+</header>
+<div class="sensor-container">
+ <!----- Graphs here ----->
+</div>
+</body>
+</html>

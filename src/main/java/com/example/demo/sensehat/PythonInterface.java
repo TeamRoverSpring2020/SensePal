@@ -33,8 +33,8 @@ public class PythonInterface implements SensorInterface {
     }
 
     private String execPythonCode(String command) {
-        //String pythonCode = "from sense_hat import SenseHat\n" +
-        String pythonCode = "from sense_emu import SenseHat\n" +
+        String pythonCode = "from sense_hat import SenseHat\n" +
+        //String pythonCode = "from sense_emu import SenseHat\n" +
                 "sense = SenseHat()\n" +
                 "\n" +
                 command;

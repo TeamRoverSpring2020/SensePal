@@ -1,16 +1,18 @@
 
 window.onload = () => sensorData();
+document.onkeydown = checkKey;
+
 
 function sensorData() {
-     fetch('http://localhost:8081/api/sensor-observation')
+     fetch('/api/sensor-observation')
         .then(res => res.json())
         .then(function(data) {
-                document.getElementById("temperature").innerHTML = data.temperature + " C",
-                document.getElementById("pressure").innerHTML = data.pressure + " mBar",
-                document.getElementById("humidity").innerHTML = data.humidity + " %"
+                document.getElementById("timestamp").innerHTML = data.timestamp,
+                document.getElementById("temperature").innerHTML = (Math.round(data.temperature * 100) / 100) + " C",
+                document.getElementById("pressure").innerHTML = (Math.round(data.pressure * 100) / 100) + " mBar",
+                document.getElementById("humidity").innerHTML = (Math.round(data.humidity * 100) / 100) + " %"
         });
 }
-
 
 function controlBoard(dir) {
     const options = {
@@ -29,9 +31,32 @@ function controlBoard(dir) {
 }
 
 
-/*window.setInterval(function(){
+window.setInterval(function(){
     sensorData()
-}, 5000);*/
+}, 3000);
+
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '38') {
+        controlBoard('drive')
+    }
+    else if (e.keyCode == '40') {
+        controlBoard('reverse')
+    }
+    else if (e.keyCode == '37') {
+        controlBoard('left')
+    }
+    else if (e.keyCode == '39') {
+        controlBoard('right')
+    }
+    else if (e.keyCode == '32') {
+        controlBoard('stop')
+    }
+}
+
 
 
 
