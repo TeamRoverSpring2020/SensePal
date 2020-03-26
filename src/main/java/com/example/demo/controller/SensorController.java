@@ -21,10 +21,7 @@ public class SensorController {
 
 
     @GetMapping("/sensordata")
-<<<<<<< HEAD
-=======
 
->>>>>>> ad5200fcb24d9ac6b8ae4e32a8bc4ec2568f8c57
     public String testPage(Model model) {
         SensorObservation sensorObservation = sensorObservationRepository.findById(2082).get();
         List<SensorObservation> sensorObservationList = (List<SensorObservation>) sensorObservationRepository.findAll();
