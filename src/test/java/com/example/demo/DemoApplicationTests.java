@@ -44,7 +44,7 @@ class DemoApplicationTests {
 
     @Test
     public void getSensorValueFromDatabase(){
-        SensorObservation sensorObservation = sensorObservationRepository.findById(1).get();
+        SensorObservation sensorObservation = sensorObservationRepository.findById(2082).get();
         System.out.println(sensorObservation.getTemperature());
 
 
@@ -54,6 +54,8 @@ class DemoApplicationTests {
         List<SensorObservation> sensorObservation = (List<SensorObservation>) sensorObservationRepository.findAll();
         for (SensorObservation item : sensorObservation) {
             System.out.println(item.getTemperature());
+            System.out.println(item.getId());
+            System.out.println(item.getTimestamp());
         }
 
 

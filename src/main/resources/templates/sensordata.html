@@ -9,7 +9,7 @@
     <script src="script.js"></script>
 </head>
 <body>
-<body>
+
 <header>
     <div class="logo">
         <a href="/login">
@@ -23,7 +23,151 @@
     </div>
 </header>
 <div class="sensor-container">
- <!----- Graphs here ----->
+
+    <canvas id="MyTempChart">
+
+        <script th:inline="javascript">
+            let myTempChart = document.getElementById('MyTempChart').getContext('2d');
+            let chart = new Chart(myTempChart, {
+                type: 'line',
+                data:{
+                    labels:[   /*[# th:each="item, iterStat : ${sensorObservationList}"]*/
+                        -              - /*[(${iterStat.count})]*/undefined,
+                        /*[/]*/],
+                    datasets:[{
+                        label: 'Temp',
+                        data:[
+                            /*[# th:each="item : ${sensorObservationList}"]*/
+                            -              - /*[(${item.getTemperature()})]*/undefined,
+                            /*[/]*/
+
+
+
+
+
+                        ],
+                        backgroundColor: '#c7d3dc',
+                        borderWidth:1,
+                        borderColor:'grey',
+                        pointRadius: 0
+
+                    }]
+                },
+                options:{
+                    title:{
+                        display:true,
+                        text: 'SenseGraph - Temperature',
+                        fontSize: 20,
+                        marginBottom: 20,
+                    },
+                    legend:{
+                        position: 'bottom',
+                        padding: 20,
+                        labels: {
+                            fontColor: 'black'
+                        }
+                    }
+                }
+            });
+
+        </script>
+    </canvas>
+    <canvas id="HumidChart">
+
+        <script th:inline="javascript">
+            let humidChart = document.getElementById('HumidChart').getContext('2d');
+            let charthumid = new Chart(humidChart, {
+                type: 'line', // bar,orizontalbar, pie,line,doughnut
+                data:{
+                    labels:[   /*[# th:each="item, iterStat : ${sensorObservationList}"]*/
+                        -              - /*[(${iterStat.count})]*/undefined,
+                        /*[/]*/],
+                    datasets:[{
+                        label: 'Humidity',
+                        data:[
+                            /*[# th:each="item : ${sensorObservationList}"]*/
+                            -              - /*[(${item.getHumidity()})]*/undefined,
+                            /*[/]*/
+
+
+
+
+
+                        ],
+                        backgroundColor: '#c7d3dc',
+                        borderWidth:1,
+                        borderColor:'grey',
+                        pointRadius: 0
+
+                    }]
+                },
+                options:{
+                    title:{
+                        display:true,
+                        text: 'SenseGraph - Humidity',
+                        fontSize: 20,
+                        marginBottom: 20,
+                    },
+                    legend:{
+                        position: 'bottom',
+                        padding: 20,
+                        labels: {
+                            fontColor: 'black'
+                        }
+                    }
+                }
+            });
+
+        </script>
+    </canvas>
+    <canvas id="PressureChart">
+
+        <script th:inline="javascript">
+            let pressureChart = document.getElementById('PressureChart').getContext('2d');
+            let chartpressure = new Chart(pressureChart, {
+                type: 'line', // bar,orizontalbar, pie,line,doughnut
+                data:{
+                    labels:[   /*[# th:each="item : ${sensorObservationList}"]*/
+                        -               /*[${#dates.format(item.getTimestamp(), 'EEE, MMMM dd, yyyy')}]*/undefined,
+                        /*[/]*/],
+                    datasets:[{
+                        label: 'Pressure',
+                        data:[
+                            /*[# th:each="item : ${sensorObservationList}"]*/
+                            -              - /*[(${item.getPressure()})]*/undefined,
+                            /*[/]*/
+
+
+
+
+
+                        ],
+                        backgroundColor: '#c7d3dc',
+                        borderWidth:1,
+                        borderColor:'grey',
+                        pointRadius: 0
+
+                    }]
+                },
+                options:{
+                    title:{
+                        display:true,
+                        text: 'SenseGraph - Pressure',
+                        fontSize: 20,
+                        marginBottom: 20,
+                    },
+                    legend:{
+                        position: 'bottom',
+                        padding: 20,
+                        labels: {
+                            fontColor: 'black'
+                        }
+                    }
+                }
+            });
+
+        </script>
+    </canvas>
 </div>
 </body>
 </html>

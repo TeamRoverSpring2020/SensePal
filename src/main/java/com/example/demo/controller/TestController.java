@@ -18,7 +18,7 @@ public class TestController {
 
     @GetMapping("/test")
     public String testPage(Model model) {
-        SensorObservation sensorObservation = sensorObservationRepository.findById(1).get();
+        SensorObservation sensorObservation = sensorObservationRepository.findById(2082).get();
         List<SensorObservation> sensorObservationList = (List<SensorObservation>) sensorObservationRepository.findAll();
         model.addAttribute(sensorObservation);
         model.addAttribute(sensorObservationList);
