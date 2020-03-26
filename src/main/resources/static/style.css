@@ -168,12 +168,6 @@ h2 {
     font-family: myfont;
 }
 
-#MyTempChart, #HumidChart, #PressureChart{
-    width:900px !important;
-    height:600px !important;
-
-}
-
 .sensor-container {
     display: flex;
     flex-wrap: wrap;
@@ -223,6 +217,10 @@ nav a {
 
 nav a:hover {
     color: rgb(85, 171, 241);
+}
+
+.active {
+    color: #55abf1;
 }
 
 header {
@@ -400,3 +398,12 @@ td {
 }
 
 /*----SENSORPAGE---*/
+
+#MyTempChart, #HumidChart, #PressureChart{
+    width:90% !important;
+    height:600px !important;
+    font-size: 26px !important;
+    color: #122C45 !important;
+    background-color: #d3d3d338;
+    margin-bottom: 30px;
+}
