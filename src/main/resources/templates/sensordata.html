@@ -24,14 +24,10 @@
         </form>
     </div>
 </header>
-<<<<<<< HEAD
-
-=======
 <div class="sensor-container">
 
 
     <canvas id="MyTempChart">
-
         <script th:inline="javascript">
             let myTempChart = document.getElementById('MyTempChart').getContext('2d');
             let chart = new Chart(myTempChart, {
@@ -46,11 +42,6 @@
                             /*[# th:each="item : ${sensorObservationList}"]*/
                             -              - /*[(${item.getTemperature()})]*/undefined,
                             /*[/]*/
-
-
-
-
-
                         ],
                         backgroundColor: '#c7d3dc',
                         borderWidth:1,
@@ -94,10 +85,6 @@
                             /*[# th:each="item : ${sensorObservationList}"]*/
                             -              - /*[(${item.getHumidity()})]*/undefined,
                             /*[/]*/
-
-
-
-
 
                         ],
                         backgroundColor: '#c7d3dc',
@@ -148,7 +135,6 @@
                         borderWidth:1,
                         borderColor:'grey',
                         pointRadius: 0
-
                     }]
                 },
                 options:{
@@ -171,6 +157,5 @@
         </script>
     </canvas>
 </div>
->>>>>>> 38ac7c79a5edc5ffc6732ca44d4c658c02f9fc5f
 </body>
 </html>

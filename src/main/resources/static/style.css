@@ -81,10 +81,15 @@ h2 {
     outline: none;
 }
 
-form {
+.logoutform {
     max-width: 500px;
     margin: auto;
     float: right;
+}
+
+.loginform {
+    max-width: 500px;
+    margin: auto;
 }
 
 .input-field:focus, .input-reg:focus {
@@ -371,3 +376,5 @@ td {
     text-align: center;
     font-size: 50px;
 }
+
+/*----SENSORPAGE---*/
