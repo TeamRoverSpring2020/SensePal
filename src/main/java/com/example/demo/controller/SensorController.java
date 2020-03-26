@@ -18,5 +18,9 @@ import javax.validation.Valid;
 @Controller
 public class SensorController {
 
+    @GetMapping("/sensordata")
+    public String SensorDataPage(@ModelAttribute User user) {
+        return "sensordata";
+    }
 
 }
