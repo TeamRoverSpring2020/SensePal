@@ -26,6 +26,7 @@
 </header>
 <div class="sensor-container">
 
+
     <canvas id="MyTempChart">
         <script th:inline="javascript">
             let myTempChart = document.getElementById('MyTempChart').getContext('2d');
@@ -120,7 +121,7 @@
                 type: 'line', // bar,orizontalbar, pie,line,doughnut
                 data:{
                     labels:[   /*[# th:each="item : ${sensorObservationList}"]*/
-                        -               /*[${#dates.format(item.getTimestamp(), 'EEE, MMMM dd, yyyy')}]*/undefined,
+                        -               /*[${#temporals.format(item.getTimestamp(),'yyyy-MM-dd HH:mm:ss)}]*/undefined,
                         /*[/]*/],
                     datasets:[{
                         label: 'Pressure',
