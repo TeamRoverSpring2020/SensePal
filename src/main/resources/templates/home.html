@@ -78,50 +78,34 @@
 
                 <script th:inline="javascript">
                     let myChart = document.getElementById('MyChart').getContext('2d');
-                    // Global options
-
-
-                    // Chart.defaults.global.defaultFontColor = '#777';
                     let chart = new Chart(myChart, {
-                        type: 'line', // bar,orizontalbar, pie,line,doughnut
+                        type: 'line',
                         data:{
-                            labels:['15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00', '22:00', '23:00', '24:00', '01:00'],
+                            labels:[   /*[# th:each="item : ${sensorObservationList}"]*/
+                                /*[[${#temporals.format(item.getTimestamp(), 'HH:mm')}]]*/undefined,
+                                /*[/]*/],
                             datasets:[{
                                 label: 'Temperature',
                                 data:[
-                                    /*[[${sensorObservation.getTemperature()}]]*/undefined,
-                                    38,
-                                    39,
-                                    35,
-                                    43,
-                                    35,
-                                    31,
-                                    30,
-                                    35,
-                                    32,
-                                    30
+                                        /*[# th:each="item : ${sensorObservationList}"]*/
+                                        -              - /*[(${item.getTemperature()})]*/undefined,
+                                        /*[/]*/
                                 ],
                                 backgroundColor: '#84a1b3',
                                 borderWidth:1,
-                                borderColor:'grey'
+                                borderColor:'grey',
+                                pointRadius: 0
                             },{
                                 label: 'Humidity',
                                 data:[
-                                    37,
-                                    38,
-                                    39,
-                                    35,
-                                    43,
-                                    35,
-                                    31,
-                                    30,
-                                    35,
-                                    32,
-                                    30
+                                    /*[# th:each="item : ${sensorObservationList}"]*/
+                                    -              - /*[(${item.getHumidity()})]*/undefined,
+                                    /*[/]*/
                                 ],
                                 backgroundColor: '#c7d3dc',
                                 borderWidth:1,
-                                borderColor:'grey'
+                                borderColor:'grey',
+                                pointRadius: 0
                             }]
                         },
                         options:{

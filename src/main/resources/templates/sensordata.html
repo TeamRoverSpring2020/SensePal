@@ -30,11 +30,12 @@
     <canvas id="MyTempChart">
         <script th:inline="javascript">
             let myTempChart = document.getElementById('MyTempChart').getContext('2d');
+            Chart.defaults.global.defaultFontColor = '#b9d0de';
             let chart = new Chart(myTempChart, {
                 type: 'line',
                 data:{
-                    labels:[   /*[# th:each="item, iterStat : ${sensorObservationList}"]*/
-                        -              - /*[(${iterStat.count})]*/undefined,
+                    labels:[   /*[# th:each="item : ${sensorObservationList}"]*/
+                        /*[[${#temporals.format(item.getTimestamp(), 'HH:mm')}]]*/undefined,
                         /*[/]*/],
                     datasets:[{
                         label: 'Temp',
@@ -64,7 +65,13 @@
                         labels: {
                             fontColor: 'black'
                         }
-                    }
+                    },
+                    xAxes: [{
+                        ticks: {
+                            autoSkip: true,
+                            maxTicksLimit: 10
+                        }
+                    }]
                 }
             });
 
@@ -77,8 +84,8 @@
             let charthumid = new Chart(humidChart, {
                 type: 'line', // bar,orizontalbar, pie,line,doughnut
                 data:{
-                    labels:[   /*[# th:each="item, iterStat : ${sensorObservationList}"]*/
-                        -              - /*[(${iterStat.count})]*/undefined,
+                    labels:[   /*[# th:each="item : ${sensorObservationList}"]*/
+                        /*[[${#temporals.format(item.getTimestamp(), 'HH:mm')}]]*/undefined,
                         /*[/]*/],
                     datasets:[{
                         label: 'Humidity',
@@ -122,7 +129,7 @@
                 type: 'line', // bar,orizontalbar, pie,line,doughnut
                 data:{
                     labels:[   /*[# th:each="item : ${sensorObservationList}"]*/
-                        -               /*[${#temporals.format(item.getTimestamp(),'yyyy-MM-dd HH:mm:ss)}]*/undefined,
+                        /*[[${#temporals.format(item.getTimestamp(), 'HH:mm')}]]*/undefined,
                         /*[/]*/],
                     datasets:[{
                         label: 'Pressure',
