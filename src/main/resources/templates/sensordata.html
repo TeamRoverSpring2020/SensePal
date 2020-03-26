@@ -18,19 +18,17 @@
     </div>
     <nav>
         <a href="/home">Home</a>
-        <a href="/sensordata">Sensor data</a>
+        <a class="active" href="/sensordata">Sensor data</a>
         <form class="logoutform" th:action="@{/logout}" method="post">
             <input class ="signout" type="submit" value="Sign out">
         </form>
     </nav>
 </header>
 <div class="sensor-container">
-
-
     <canvas id="MyTempChart">
         <script th:inline="javascript">
             let myTempChart = document.getElementById('MyTempChart').getContext('2d');
-            Chart.defaults.global.defaultFontColor = '#b9d0de';
+            Chart.defaults.global.defaultFontColor = '#B9D0DE';
             let chart = new Chart(myTempChart, {
                 type: 'line',
                 data:{
@@ -46,7 +44,7 @@
                         ],
                         backgroundColor: '#76a9d3',
                         borderWidth:1,
-                        borderColor:'grey',
+                        borderColor:'white',
                         pointRadius: 0
 
                     }]
@@ -60,10 +58,11 @@
                     },
                     legend:{
                         position: 'bottom',
-                        fontSize: 20,
+                        fontSize: 24,
                         padding: 20,
                         labels: {
-                            fontColor: 'black'
+                            fontSize: 20,
+                            fontColor: 'white'
                         }
                     },
                     xAxes: [{
@@ -95,9 +94,9 @@
                             /*[/]*/
 
                         ],
-                        backgroundColor: '#B9D0DE',
+                        backgroundColor: '#76a9d3',
                         borderWidth:1,
-                        borderColor:'grey',
+                        borderColor:'white',
                         pointRadius: 0
 
                     }]
@@ -111,9 +110,11 @@
                     },
                     legend:{
                         position: 'bottom',
+                        fontSize: 24,
                         padding: 20,
                         labels: {
-                            fontColor: 'black'
+                            fontSize: 20,
+                            fontColor: 'white'
                         }
                     }
                 }
@@ -139,9 +140,10 @@
                             /*[/]*/
 
                         ],
-                        backgroundColor: '#B9D0DE',
+                        backgroundColor: '#76a9d3',
                         borderWidth:1,
-                        borderColor:'grey',
+                        fontSize: 20,
+                        borderColor:'white',
                         pointRadius: 0
                     }]
                 },
@@ -154,9 +156,11 @@
                     },
                     legend:{
                         position: 'bottom',
-                        padding: 20,
+                        padding: 24,
+                        fontSize: 20,
                         labels: {
-                            fontColor: 'black'
+                            fontSize: 20,
+                            fontColor: 'white'
                         }
                     }
                 }
