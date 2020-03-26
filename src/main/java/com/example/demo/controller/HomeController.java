@@ -20,7 +20,7 @@ public class HomeController {
 
     @GetMapping("/home")
     public String homePage(Model model) {
-        SensorObservation sensorObservation = sensorObservationRepository.findById(1).get();
+        SensorObservation sensorObservation = sensorObservationRepository.findById(2082).get();
         List<SensorObservation> sensorObservationList = (List<SensorObservation>) sensorObservationRepository.findAll();
         model.addAttribute(sensorObservation);
         model.addAttribute(sensorObservationList);
