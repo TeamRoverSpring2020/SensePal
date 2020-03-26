@@ -7,9 +7,10 @@ function sensorData() {
      fetch('/api/sensor-observation')
         .then(res => res.json())
         .then(function(data) {
-                document.getElementById("temperature").innerHTML = data.temperature + " C",
-                document.getElementById("pressure").innerHTML = data.pressure + " mBar",
-                document.getElementById("humidity").innerHTML = data.humidity + " %"
+                document.getElementById("timestamp").innerHTML = data.timestamp,
+                document.getElementById("temperature").innerHTML = (Math.round(data.temperature * 100) / 100) + " C",
+                document.getElementById("pressure").innerHTML = (Math.round(data.pressure * 100) / 100) + " mBar",
+                document.getElementById("humidity").innerHTML = (Math.round(data.humidity * 100) / 100) + " %"
         });
 }
 

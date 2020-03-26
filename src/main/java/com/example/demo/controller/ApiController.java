@@ -15,7 +15,7 @@ public class ApiController {
     @Autowired
     SensorObservationRepository sensorObservationRepository;
 
-   /* @Autowired
+/*    @Autowired
     NavigationApi navigationApi;*/
 
     @GetMapping("/api/sensor-observation")
@@ -28,9 +28,13 @@ public class ApiController {
     }
 
     @PostMapping(path = "/api/navigation", consumes = "application/json", produces = "application/json")
-    public void navigate(@RequestBody Navigation navigation){
-            //navigationApi.navigationState(navigation.getDirection());
-            System.out.println(navigation.getDirection());
+    public void navigate(@RequestBody Navigation navigation) {
+        //navigationApi.navigationState(navigation.getDirection());
+        System.out.println(navigation.getDirection());
     }
-
 }
+
+/*    @GetMapping("/test")
+    public List<SensorObservation>
+
+}*/

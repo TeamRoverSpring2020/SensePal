@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDateTime;
 
 @Entity
 public class SensorObservation {
@@ -12,7 +13,7 @@ public class SensorObservation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    //private static LocalDateTime dateTime;
+    private LocalDateTime timestamp;
     private Double temperature;
     private Double humidity;
     private Double pressure;
@@ -22,17 +23,40 @@ public class SensorObservation {
 
 /*    public SensorObservation(){
         SenseHatMethods senseHatMethods = new SenseHatMethods();
+        this.timestamp = LocalDateTime.now();
         this.temperature = senseHatMethods.getTemperature();
         this.humidity = senseHatMethods.getHumidity();
         this.pressure = senseHatMethods.getPressure();
     }*/
 
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
+
+
+    public void setTimestamp(LocalDateTime timestamp) {
+        this.timestamp = timestamp;
+    }
+
     public Double getTemperature() {
         return temperature;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setTemperature(Double temperature) {
+        this.temperature = temperature;
+    }
+
     public Double getHumidity() {
         return humidity;
+    }
+
+    public void setHumidity(Double humidity) {
+        this.humidity = humidity;
+
     }
 
     public Double getPressure() {
