@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
     <script src="script.js"></script>
@@ -17,11 +17,16 @@
         </a>
     </div>
     <div class="nav">
+        <a href="/home">Home</a>
+        <a href="/sensordata">Sensor data</a>
         <form th:action="@{/logout}" method="post">
             <input class ="signout" type="submit" value="Sign out">
         </form>
     </div>
 </header>
+<<<<<<< HEAD
+
+=======
 <div class="sensor-container">
 
 
@@ -166,5 +171,6 @@
         </script>
     </canvas>
 </div>
+>>>>>>> 38ac7c79a5edc5ffc6732ca44d4c658c02f9fc5f
 </body>
 </html>

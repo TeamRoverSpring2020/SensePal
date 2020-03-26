@@ -84,6 +84,7 @@ h2 {
 form {
     max-width: 500px;
     margin: auto;
+    float: right;
 }
 
 .input-field:focus, .input-reg:focus {
