@@ -23,8 +23,8 @@ public class ApiController {
         /*SensorObservation sensorObservation = new SensorObservation();
         sensorObservationRepository.save(sensorObservation);
         return sensorObservation;*/
-        System.out.println(sensorObservationRepository.findById(1).get());
-        return sensorObservationRepository.findById(1).get();
+        System.out.println(sensorObservationRepository.findById(2082).get());
+        return sensorObservationRepository.findById(2082).get();
     }
 
     @PostMapping(path = "/api/navigation", consumes = "application/json", produces = "application/json")
