@@ -8,7 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
     <script src="script.js"></script>
 </head>
-<body>
+<body class="sensebody">
 
 <header>
     <div class="logo">
@@ -16,13 +16,13 @@
             <img class="logo-img" src="logo.png">
         </a>
     </div>
-    <div class="nav">
+    <nav>
         <a href="/home">Home</a>
         <a href="/sensordata">Sensor data</a>
-        <form th:action="@{/logout}" method="post">
+        <form class="logoutform" th:action="@{/logout}" method="post">
             <input class ="signout" type="submit" value="Sign out">
         </form>
-    </div>
+    </nav>
 </header>
 <div class="sensor-container">
 
@@ -44,7 +44,7 @@
                             -              - /*[(${item.getTemperature()})]*/undefined,
                             /*[/]*/
                         ],
-                        backgroundColor: '#c7d3dc',
+                        backgroundColor: '#76a9d3',
                         borderWidth:1,
                         borderColor:'grey',
                         pointRadius: 0
@@ -60,6 +60,7 @@
                     },
                     legend:{
                         position: 'bottom',
+                        fontSize: 20,
                         padding: 20,
                         labels: {
                             fontColor: 'black'
@@ -94,7 +95,7 @@
                             /*[/]*/
 
                         ],
-                        backgroundColor: '#c7d3dc',
+                        backgroundColor: '#B9D0DE',
                         borderWidth:1,
                         borderColor:'grey',
                         pointRadius: 0
@@ -138,7 +139,7 @@
                             /*[/]*/
 
                         ],
-                        backgroundColor: '#c7d3dc',
+                        backgroundColor: '#B9D0DE',
                         borderWidth:1,
                         borderColor:'grey',
                         pointRadius: 0
