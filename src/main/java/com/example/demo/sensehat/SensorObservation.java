@@ -18,16 +18,16 @@ public class SensorObservation {
     private Double humidity;
     private Double pressure;
 
-/*    public SensorObservation(){
-    }*/
-
     public SensorObservation(){
+    }
+
+/*    public SensorObservation(){
         SenseHatMethods senseHatMethods = new SenseHatMethods();
         this.timestamp = LocalDateTime.now();
         this.temperature = senseHatMethods.getTemperature();
         this.humidity = senseHatMethods.getHumidity();
         this.pressure = senseHatMethods.getPressure();
-    }
+    }*/
 
     public LocalDateTime getTimestamp() {
         return timestamp;

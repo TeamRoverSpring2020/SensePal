@@ -4,7 +4,7 @@ import com.pi4j.io.gpio.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class NavigationApi {
 
     final GpioController gpio;
