@@ -193,12 +193,14 @@ h2 {
 
 
 .welcome {
-    font-size: 18px;
     width: 640px;
-    margin-left: 12%;
     text-align: center;
+    font-size: 18px;
     color: white;
+    margin-left: 13%;
 }
+
+
 
 nav {
     position: absolute;
@@ -400,8 +402,8 @@ td {
 /*----SENSORPAGE---*/
 
 #MyTempChart, #HumidChart, #PressureChart{
-    width:90% !important;
-    height:600px !important;
+    width:70% !important;
+    height:500px !important;
     font-size: 26px !important;
     color: #122C45 !important;
     background-color: #d3d3d338;
